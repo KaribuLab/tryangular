@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="appSesion1">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Try Angular - Sesion 1.1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+</head>
+
+<body ng-controller="controlador">
+    <p>{{texto}}</p>
+
+    <script>
+        angular.module("appSesion1", []);
+        angular.module("appSesion1").controller('controlador',['$scope', function($scope){
+            $scope.texto = "hola mundo";
+        }])
+    </script>
+</body>
+
+</html>

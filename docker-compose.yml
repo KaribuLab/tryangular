@@ -1,0 +1,23 @@
+version: '2'
+services:
+
+  apache:
+    image: 'httpd:alpine'
+    ports:
+      - '9880:80'
+    volumes:
+      - './config/apache/apache.conf:/usr/local/apache2/conf/httpd.conf'
+      - './src:/usr/local/apache2/htdocs'
+
+  node:
+    build:
+      context: './config/node'
+      dockerfile: 'Dockerfile'
+    ports:
+      - '8880:8880'
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - './src:/home/node/app'
+    depends_on:
+      - 'apache'
