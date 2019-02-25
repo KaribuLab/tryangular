@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Try Angular - Sesion 1.1</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
 </head>
 
 <body>
-    <div  ng-controller="controlador"
+    <div  ng-controller="controlador">
     <p>{{texto}}</p>
     <p>{{msg}}</p>
 </div>
 
- <div  ng-controller="controlador2"
+ <div  ng-controller="controlador2">
     <p>{{texto}}</p>
         <p>{{msg}}</p>
 
 </div>
+    <script src="assets/js/angular.min.js"></script>
     <script>
         angular.module("appSesion1", []);
         angular.module("appSesion1").controller('controlador',['$scope','$rootScope', function($scope,$rootScope){
