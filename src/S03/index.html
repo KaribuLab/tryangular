@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32" />
     <style>
         * {
             margin: 0;
@@ -68,8 +69,8 @@
     <header ng-controller="HeaderController" ng-include="'modules/main/views/HeaderView.html'"></header>
     <aside ng-controller="AsideController" ng-include="'modules/main/views/AsideView.html'"></aside>
     <main>
-        <div ng-controller="FormAController" ng-include="'modules/main/views/FormAView.html'"></div>
-        <div ng-controller="FormBController" ng-include="'modules/main/views/FormBView.html'"></div>
+        <div ng-controller="FormABController" ng-include="'modules/main/views/FormABView.html'"></div>
+        <div ng-controller="FormCController" ng-include="'modules/main/views/FormCView.html'"></div>
     </main>
     <footer ng-controller="FooterController" ng-include="'modules/main/views/FooterView.html'"></footer>
 
@@ -78,8 +79,8 @@
     <script src="modules/main/MainModule.js"></script>
     <script src="modules/main/controllers/HeaderController.js"></script>
     <script src="modules/main/controllers/AsideController.js"></script>
-    <script src="modules/main/controllers/FormAController.js"></script>
-    <script src="modules/main/controllers/FormBController.js"></script>
+    <script src="modules/main/controllers/FormABController.js"></script>
+    <script src="modules/main/controllers/FormCController.js"></script>
     <script src="modules/main/controllers/FooterController.js"></script>
 </body>
 
