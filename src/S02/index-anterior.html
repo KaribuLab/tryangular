@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="appSesion1">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Try Angular - Sesion 1.1</title>
+</head>
+
+<body>
+    <div  ng-controller="controlador">
+    <p>{{texto}}</p>
+    <p>{{msg}}</p>
+</div>
+
+ <div  ng-controller="controlador2">
+    <p>{{texto}}</p>
+    <p>{{msg}}</p>
+</div>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script>
+        angular.module("appSesion1", []);
+        angular.module("appSesion1").controller('controlador',['$scope','$rootScope', function($scope,$rootScope){
+            $scope.texto = "hola mundo";
+            $rootScope.msg = "root scope ";
+        }])
+        angular.module("appSesion1").controller('controlador2',['$scope', function($scope){
+            $scope.texto = "hola mundo V2";
+        }])
+        
+    </script>
+</body>
+
+</html>

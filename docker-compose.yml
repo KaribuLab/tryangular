@@ -7,7 +7,7 @@ services:
       - '9880:80'
     volumes:
       - './config/apache/apache.conf:/usr/local/apache2/conf/httpd.conf'
-      - './src/S03:/usr/local/apache2/htdocs'
+      - './src/S04:/usr/local/apache2/htdocs'
 
   node:
     build:
@@ -18,6 +18,6 @@ services:
     user: "node"
     working_dir: /home/node/app
     volumes:
-      - './src/S03:/home/node/app'
+      - './src/S04:/home/node/app'
     depends_on:
       - 'apache'

@@ -2,20 +2,22 @@
     FORM A
 
     <input type="text" ng-model="nombre">
-
+	<span style="color: red; display: block;" ng-show="nombre ==''">Falta el nombre</span>
     <input type="text" ng-model="apellido">
+
+    <button ng-click="asignar()">Boton B</button>
 
 </div>
 
-<div>
+<div ng-show="nombre == 'Jorge'">
     FORM B
 
     <input type="text" ng-model="direccion">
-
+	
     <input type="text" ng-model="telefono">
 
     <input type="checkbox" ng-model="activarBoton">
 
-    <button>BOTON 1</button>
+    <button ng-disabled="!activarBoton"="activarBoton">BOTON 1</button>
 
 </div>
