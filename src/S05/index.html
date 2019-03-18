@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="MainModule">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Try Angular - Sesion 5</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/estilo.css" />
+</head>
+
+<body>
+    <header ng-controller="HeaderController" ng-include="'modules/main/views/HeaderView.html'"></header>
+    <aside ng-controller="AsideController" ng-include="'modules/main/views/AsideView.html'"></aside>
+    <main>
+        <div ng-controller="StyleController" ng-include="'modules/main/views/StyleView.html'"></div>
+    </main>
+    <footer ng-controller="FooterController" ng-include="'modules/main/views/FooterView.html'"></footer>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    
+    <script src="modules/main/MainModule.js"></script>
+    <script src="modules/main/controllers/HeaderController.js"></script>
+    <script src="modules/main/controllers/AsideController.js"></script>
+    <script src="modules/main/controllers/StyleController.js"></script>
+    <script src="modules/main/controllers/FooterController.js"></script>
+</body>
+
+</html>

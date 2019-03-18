@@ -1,0 +1,19 @@
+<div>
+    <input type="checkbox" ng-model="check">check</input>
+    {{check}}
+    <input type="checkbox" ng-model="checkb">checkb</input>
+    {{checkb}}
+    <p ng-style="{'color': varColor}">Hola</p>
+    <!-- <p ng-style="{'color': check ? 'blue' : 'black'}">Hola</p> -->
+    <!-- <p ng-style="(check && {'color':'brown'})">Hola</p> -->
+    <!-- <p ng-style="((check && {'color':'blue'}) || (checkb && {'color':'green'}))">Hola</p> -->
+    <!-- <p ng-class="check ? 'texto-rojo-bold':'texto-azul-light'">Hola</p> -->
+    <!-- <p ng-class="varEstilo">Hola</p> -->
+    <!-- <p ng-class="{'texto-rojo-bold': check, 'borde-rojo': check && checkb}">Hola</p> -->
+
+    <!--<div ng-repeat="item in lista">
+        <p ng-style="{'color': ($index%2==0) ? 'blue' : 'red'}">{{item}}</p>
+    </div> -->
+
+    <!-- <p ng-class="pintarTexto(check)">Llamando funcion pintarTexto</p> -->
+</div>
