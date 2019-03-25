@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="../../modules/service/components/containerB/ContainerBStyle.css">
+<div>
+    <h1>CONTAINER B</h1>
+    <input type="text" ng-model="texto">
+    <button ng-click="agregar()">AGREGAR</button>
+    <hr>    
+    <table>
+        <thead>
+            <tr><th>LISTA</th></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in lista">
+                <th>{{item}}</th>
+            </tr>
+        </tbody>
+    </table>
+</div>

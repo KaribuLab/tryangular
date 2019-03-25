@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="EjemploModule">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Try Angular - Sesion 5</title>
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="32x32" />
+
+    <link rel="stylesheet" type="text/css" href="../../assets/css/estilo.css" />
+</head>
+
+<body>
+    <div>
+        <div ng-controller="EjemploController" ng-include="'../../modules/ejemplo/views/EjemploView.html'"></div>
+    </div>
+
+
+    <script src="../../node_modules/angular/angular.min.js"></script>
+    <!--script src="../../assets/js/angular.min.js"></script-->
+
+    <script src="../../modules/utils/UtilsModule.js"></script>
+    <script src="../../modules/utils/constants/LISTA.js"></script>
+
+    <script src="../../modules/ejemplo/EjemploModule.js"></script>
+    <script src="../../modules/ejemplo/constants/EJEMPLO.js"></script>
+    <script src="../../modules/ejemplo/controllers/EjemploController.js"></script>
+</body>
+
+</html>

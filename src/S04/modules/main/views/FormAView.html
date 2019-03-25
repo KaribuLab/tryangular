@@ -1,4 +1,4 @@
-FORM A
+FORM A 
 
 <input type="text" ng-model="objeto.nombre" ng-blur="funcionBlur();">
 
@@ -10,3 +10,9 @@ FORM A
 
 <button style="background: {{objeto.nombre}};" ng-click="funcionClick('Hola')">{{objeto.nombre}}</button>
 <button ng-click="funcionClick('Chao');">BOTON 2</button>
+
+<div ng-repeat="objeto in lista | orderBy: ['-nombre','-id']">
+	<span>{{objeto.id}}</span>
+	<p>{{objeto.nombre}}</p>
+	<button ng-if="objeto.activo">DESACTIVAR</button>
+</div>

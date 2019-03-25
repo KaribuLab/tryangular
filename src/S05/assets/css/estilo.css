@@ -58,6 +58,8 @@ footer {
 .texto-rojo-bold {
     color: red;
     font-weight: bold;
+    border: 2px solid green;
+    border-radius: 6px;
 }
 
 .texto-azul-light {
@@ -67,4 +69,9 @@ footer {
 
 .borde-rojo {
     border: 1px solid red;
+}
+
+.mayor {
+    border: 5px green solid;
+    border-radius: 20px;
 }

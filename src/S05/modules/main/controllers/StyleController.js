@@ -1,7 +1,12 @@
 angular.module("MainModule").controller("StyleController",
-["$scope", 
-function($scope){
-	$scope.varColor = "red";
+["$scope", "EJEMPLO",
+function($scope, EJEMPLO){
+	
+	$scope.listaPersonas = EJEMPLO.personas;
+	$scope.listaColores = EJEMPLO.colores;
+	$scope.metodoMayor = EJEMPLO.esMayor;
+
+	$scope.varColor = "blue";
 	$scope.varEstilo = "texto-rojo-bold";
 
 	$scope.lista=['Manzana', 'Pera', 'Uva', 'Cereza', 'Mora'];

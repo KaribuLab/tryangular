@@ -1,0 +1,8 @@
+ejemplo > div {
+    width: 100%;
+}
+
+ejemplo > div > div {
+    width: 49%;
+    display: inline-block;
+}

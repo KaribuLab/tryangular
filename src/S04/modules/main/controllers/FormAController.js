@@ -1,6 +1,6 @@
 angular.module("MainModule").controller("FormAController",
-["$scope", "$log",
-function($scope, $log){
+["$scope", "$log", "$timeout",
+function($scope, $log, $timeout){
 
 $scope.objeto = {};
 
@@ -20,5 +20,22 @@ $scope.funcionBlur = function(){
 $scope.funcionPress = function(){
 	$log.log($scope.objeto.apellido);
 };
+
+$scope.lista = [
+{ id: "1", nombre: "red", activo: true},
+{ id: "2", nombre: "green", activo: false},
+{ id: "3", nombre: "blue", activo: true},
+{ id: "4", nombre: "red", activo: true}
+];
+
+$scope.$watch(function(){
+	return $scope.objeto.nombre + $scope.objeto.apellido;
+}, function(){
+	$log.log($scope.objeto.nombre + $scope.objeto.apellido);
+});
+
+$timeout(function(){
+	$scope.objeto.apellido = $scope.objeto.apellido + "prueba";
+}, 5000);
 
 }]);

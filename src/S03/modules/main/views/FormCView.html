@@ -3,14 +3,15 @@
 
     <input type="text" ng-model="correo">
 
-    <input type="text" ng-model="rut">
+    <input type="text" ng-model="tipo">
 
-    <select>
-        <option value="">seleccionar tipo</option>
-        <option value="tipo1">tipo1</option>
-        <option value="tipo2">tipo2</option>
-        <option value="tipo3">tipo3</option>
-    </select>
-
+    <div ng-switch="tipo">
+        <button ng-switch-when="1">tipo1</button>
+        <button ng-switch-when="2">tipo2</button>
+        <button ng-switch-when="3">tipo3</button>
+        <button ng-switch-when="4">tipo4</button>
+        <button ng-switch-default>DEFAULT</button>
+    </div>
+     
     <button>BOTON 2</button>
 </div>
