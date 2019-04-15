@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="../../modules/service/components/containerA/ContainerAStyle.css">
+<div>
+    <h1>Listado A</h1>
+    <button ng-click="obtenerLista()">Obtener Lista</button>
+    <button ng-click="irListadoB()">Ir a Listado B</button>
+    <p ng-show="cargando">Cargando lista...</p>
+    <p ng-show="mensajeError" class="mensaje-error">Error al obtener la lista</p>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>LISTA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in lista">
+                <td>{{item.usuario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

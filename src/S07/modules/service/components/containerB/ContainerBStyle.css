@@ -1,0 +1,10 @@
+container-b > div {
+    width: 49%;
+    display: inline-block;
+}
+
+container-b .usuario-inasistentes{
+    font-size: 18px;
+    color: red;
+}
+

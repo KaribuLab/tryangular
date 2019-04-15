@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="../../modules/service/components/containerB/ContainerBStyle.css">
+<div>
+    <h1>Listado B</h1>
+    <button ng-click="obtenerListaInasistentes()">Obtener Lista</button>
+    <p ng-show="cargando">Cargando lista...</p>
+    <p ng-show="mensajeError" class="mensaje-error">Error al obtener la lista</p>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>LISTA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in listaB">
+                <td class="usuario-inasistentes">{{item.usuario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
