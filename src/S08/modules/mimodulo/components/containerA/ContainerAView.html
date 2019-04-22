@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../../modules/mimodulo/components/containerA/ContainerAStyle.css">
+<div>
+    <h1>Listado A</h1>
+    <h2>Filtro fecha: {{fechaFormateada}}</h2>
+    <h3>Filtro decimal: {{120.62123123 | redondearDecimal}}</h3>
+    <button ng-click="obtenerLista()">Obtener Lista</button>
+    <p ng-show="cargando">Cargando lista...</p>
+    <p ng-show="mensajeError" class="mensaje-error">Error al obtener la lista</p>
+    <div mi-div></div>
+    <mi-div></mi-div>
+    
+    <div class="mi-div-2"></div>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>LISTA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in lista">
+                <td>{{item.usuario}}</td>
+                <td>{{item.fechaIngreso | date:'dd/MM/yyyy Hs:mma'}}</td>
+                <td ng-bind-html="item.descripcion"></td>
+            </tr>
+            <input ng-model="inputVar" maxlength="12" solo-texto-num/>
+        </tbody>
+    </table>
+</div>

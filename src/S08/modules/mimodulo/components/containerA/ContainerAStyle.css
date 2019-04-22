@@ -1,0 +1,8 @@
+container-a > div {
+    width: 49%;
+    display: inline-block;
+}
+
+.contadorDeCaracteres{
+    color: #6D6B6B;
+}
