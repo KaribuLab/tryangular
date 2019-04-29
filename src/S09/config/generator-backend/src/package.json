@@ -1,0 +1,22 @@
+{
+  "name": "GeneradorBase",
+  "version": "1.0.0-dev",
+  "description": "",
+  "main": "index.html",
+  "author": "Karibu - Jorge Parra",
+  "url": "",
+  "copyright": "",
+  "license": "",
+  "devDependencies": {
+    "generator-api-java-springboot-jpa": "0.1.0",
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

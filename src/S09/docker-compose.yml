@@ -1,0 +1,91 @@
+version: '2'
+services:
+
+  db:
+     build:
+       context: './config/db'
+       dockerfile: 'Dockerfile'
+     ports:
+       - '13306:3306'
+     volumes:
+       - '/etc/localtime:/etc/localtime:ro'
+       - './config/base-common/timezone:/etc/timezone:ro'
+     environment:
+       MYSQL_ROOT_PASSWORD: root123
+
+  backend:
+    build:
+      context: './config/backend'
+      dockerfile: 'Dockerfile'
+    ports:
+      - '18080:8080'
+      - '18000:8000'
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - './config/base-common/timezone:/etc/timezone:ro'
+      - './src/api:/usr/src/project'
+      - 'm2_volume:/home/maven/.m2'
+    depends_on:
+      - 'db'
+
+  apache:
+    image: 'httpd:alpine'
+    ports:
+      - '11080:80'
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - './config/base-common/timezone:/etc/timezone:ro'
+      - './config/apache/apache.conf:/usr/local/apache2/conf/httpd.conf'
+      - './src/ui:/usr/local/apache2/htdocs'
+    depends_on:
+      - 'backend'
+  
+  apache-min:
+    image: 'httpd:alpine'
+    ports:
+      - '12080:80'
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - './config/base-common/timezone:/etc/timezone:ro'
+      - './config/apache/apache.conf:/usr/local/apache2/conf/httpd.conf'
+      - './src/ui/dist:/usr/local/apache2/htdocs'
+    depends_on:
+      - 'backend'
+
+  node:
+    build:
+      context: './config/node'
+      dockerfile: 'Dockerfile'
+    ports:
+      - '10080:10080'
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - './config/base-common/timezone:/etc/timezone:ro'
+      - './src/ui:/home/node/app'
+    depends_on:
+      - 'apache'
+
+  generator-java:
+    build:
+      context: './config/generator-backend'
+      dockerfile: 'Dockerfile'
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - './data/generator/data.json:/home/node/app/.yo-rc.json'
+      - './src/api:/home/node/app/project'
+
+  generator-angularjs:
+    build:
+      context: './config/generator-frontend'
+      dockerfile: 'Dockerfile'
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - './data/generator/data.json:/home/node/app/.yo-rc.json'
+      - './src/ui:/home/node/app/project'
+
+volumes:
+  m2_volume:

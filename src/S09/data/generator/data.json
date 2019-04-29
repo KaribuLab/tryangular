@@ -1,0 +1,512 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorEmail": "jorge.parra@karibu.cl",
+      "authorUrl": ""
+    }
+  },
+  "data-project": {
+    "projectName": "Agendador",
+    "shortName": "agendador-web",
+    "description": "Agendador Web",
+    "owner": "Agendador",
+    "gitRepoUrl": "https://gitlab.com/karibu-cl/Desarrollo/clientes/claro/proyectos/agendador.git",
+    "creationDate": "2019-03-13T20:03:25.857Z"
+  },
+  "data-app-project": {
+    "name": "main",
+    "layers": {
+      "db": {
+        "engine": "Oracle"
+      },
+      "backend": {
+        "gitRepoUrl": "https://gitlab.com/karibu-cl/Desarrollo/clientes/claro/aplicaciones/appclr010.git"
+      },
+      "frontend": {
+        "gitRepoUrl": "https://gitlab.com/karibu-cl/Desarrollo/clientes/claro/aplicaciones/appclr002.git"
+      }
+    }
+  },
+  "generator-api-java-springboot-jpa": {
+    "basePackage": "cl.karibu.project",
+    "packageOrder": "Entidades",
+    "dbEngine": "Oracle",
+    "entities": {
+      "User": {
+        "name": "User",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "email",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "firstName",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "Action": {
+        "name": "Action",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "name",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "description",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "Param": {
+        "name": "Param",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "name",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "description",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "Address": {
+        "name": "Address",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "commune",
+            "isList": false,
+            "type": "Commune",
+            "relation": true
+          },
+          {
+            "name": "region",
+            "isList": false,
+            "type": "Region",
+            "relation": true
+          },
+          {
+            "name": "street",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "streetNumber",
+            "isList": false,
+            "type": "int",
+            "relation": false
+          },
+          {
+            "name": "location",
+            "isList": false,
+            "type": "Location",
+            "relation": true
+          },
+          {
+            "name": "country",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "postalCode",
+            "isList": false,
+            "type": "int",
+            "relation": false
+          }
+        ]
+      },
+      "Client": {
+        "name": "Client",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "name",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "phone",
+            "isList": false,
+            "type": "int",
+            "relation": false
+          },
+          {
+            "name": "secondPhone",
+            "isList": false,
+            "type": "int",
+            "relation": false
+          },
+          {
+            "name": "reference",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "Activity": {
+        "name": "Activity",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "type",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "description",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "Product": {
+        "name": "Product",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "name",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "type",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "description",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "inventory",
+            "isList": false,
+            "type": "Inventory",
+            "relation": true
+          }
+        ]
+      },
+      "Inventory": {
+        "name": "Inventory",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "name",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "type",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "description",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "Region": {
+        "name": "Region",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "commune",
+            "isList": false,
+            "type": "Commune",
+            "relation": true
+          },
+          {
+            "name": "name",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "shortName",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "Commune": {
+        "name": "Commune",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "name",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "region",
+            "isList": false,
+            "type": "Region",
+            "relation": true
+          }
+        ]
+      },
+      "Location": {
+        "name": "Location",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": []
+      },
+      "Technology": {
+        "name": "Technology",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "type",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "description",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "Permission": {
+        "name": "Permission",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": []
+      },
+      "Profile": {
+        "name": "Profile",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": []
+      },
+      "Node": {
+        "name": "Node",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "commune",
+            "isList": false,
+            "type": "Commune",
+            "relation": true
+          }
+        ]
+      },
+      "Filter": {
+        "name": "Filter",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": []
+      },
+      "History": {
+        "name": "History",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": []
+      },
+      "Order": {
+        "name": "Order",
+        "type": "IdStaticEntity(Id - UUID Manual)",
+        "attribs": [
+          {
+            "name": "activity",
+            "isList": false,
+            "type": "Activity",
+            "relation": true
+          },
+          {
+            "name": "status",
+            "isList": false,
+            "type": "Status",
+            "relation": true
+          },
+          {
+            "name": "technology",
+            "isList": false,
+            "type": "Technology",
+            "relation": true
+          },
+          {
+            "name": "node",
+            "isList": false,
+            "type": "Node",
+            "relation": true
+          }
+        ]
+      },
+      "Display": {
+        "name": "Display",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "profile",
+            "isList": false,
+            "type": "Profile",
+            "relation": true
+          },
+          {
+            "name": "activity",
+            "isList": false,
+            "type": "Activity",
+            "relation": true
+          }
+        ]
+      },
+      "Status": {
+        "name": "Status",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "display",
+            "isList": false,
+            "type": "Display",
+            "relation": true
+          },
+          {
+            "name": "order",
+            "isList": false,
+            "type": "Order",
+            "relation": true
+          },
+          {
+            "name": "permission",
+            "isList": false,
+            "type": "Permission",
+            "relation": true
+          }
+        ]
+      },
+      "Prueba": {
+        "name": "Prueba",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "name",
+            "isList": false,
+            "type": "boolean",
+            "relation": false
+          }
+        ]
+      },
+      "UserData": {
+        "name": "UserData",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "firstName",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "lastName",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "email",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          },
+          {
+            "name": "profile",
+            "isList": false,
+            "type": "Profile",
+            "relation": true
+          },
+          {
+            "name": "orders",
+            "isList": true,
+            "type": "Request",
+            "relation": true
+          },
+          {
+            "name": "allied",
+            "isList": false,
+            "type": "Allied",
+            "relation": true
+          },
+          {
+            "name": "partner",
+            "isList": false,
+            "type": "Patner",
+            "relation": true
+          }
+        ]
+      },
+      "Partner": {
+        "name": "Partner",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "description",
+            "isList": false,
+            "type": "String",
+            "relation": false
+          }
+        ]
+      },
+      "StatusChange": {
+        "name": "StatusChange",
+        "type": "IdEntity(Id - UUID Autogenerado)",
+        "attribs": [
+          {
+            "name": "activity",
+            "isList": false,
+            "type": "Activity",
+            "relation": true
+          },
+          {
+            "name": "action",
+            "isList": false,
+            "type": "Action",
+            "relation": true
+          },
+          {
+            "name": "currentStatus",
+            "isList": false,
+            "type": "Status",
+            "relation": true
+          },
+          {
+            "name": "newStatus",
+            "isList": false,
+            "type": "Status",
+            "relation": true
+          }
+        ]
+      }
+    }
+  }
+}
