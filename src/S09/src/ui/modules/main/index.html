@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainModule">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/isteven-multi-select.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/angular-multiple-select/build/multiple-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/ui-select/dist/select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="https://www.highcharts.com/media/com_demo/css/highslide.css" />
+    <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+    
+    <title>Ejemplo{{( $root.currentState == undefined ? '' : ' - ' + $root.currentState.self.title)}}</title>
+
+</head>
+
+<body>
+    <main></main>  
+
+    <!-- DEPENDENCIAS -->
+    <script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-materialize/src/angular-materialize.min.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-messages/angular-messages.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-cookies/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="../../node_modules/ui-select/dist/select.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/isteven-multi-select.js"></script>
+    <script type="text/javascript" src="../../node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-ui-router-uib-modal/angular-ui-router-uib-modal.js"></script>
+
+    <!-- MODULO COMMONS -->
+    <script type="text/javascript" src="../../modules/commons/CommonsModule.js"></script>
+    <script type="text/javascript" src="../../modules/commons/components/loading/LoadingComponent.js"></script>
+    <script type="text/javascript" src="../../modules/commons/components/menubar/MenubarComponent.js"></script>
+    <script type="text/javascript" src="../../modules/commons/components/sidebar/SidebarComponent.js"></script>
+    <script type="text/javascript" src="../../modules/commons/components/topbar/TopbarComponent.js"></script>
+
+    <!-- MODULO SERVICE -->
+    <script type="text/javascript" src="../../modules/service/ServiceModule.js"></script>
+    <script type="text/javascript" src="../../modules/service/constants/ServiceUrl.js"></script>
+    <script type="text/javascript" src="../../modules/service/directives/AuthenticationProfile.js"></script>
+    <script type="text/javascript" src="../../modules/service/services/RestService.js"></script>
+    <script type="text/javascript" src="../../modules/service/services/CrudService.js"></script>
+    <script type="text/javascript" src="../../modules/service/services/SyncService.js"></script>
+    <script type="text/javascript" src="../../modules/service/services/SessionService.js"></script>
+
+    <!-- MODULO UTILS -->
+    <script type="text/javascript" src="../../modules/utils/UtilsModule.js"></script>    
+    <script type="text/javascript" src="../../modules/utils/components/modal/ModalComponent.js"></script>
+    <script type="text/javascript" src="../../modules/utils/directives/compile.js"></script>
+    <script type="text/javascript" src="../../modules/utils/services/MessageService.js"></script>
+    <script type="text/javascript" src="../../modules/utils/services/ModalService.js"></script>
+
+    <!-- MODULO VALIDATE -->
+    <script type="text/javascript" src="../../modules/validate/ValidateModule.js"></script>
+    
+    <!-- MODULO MAIN -->
+    <script type="text/javascript" src="MainModule.js"></script>
+    <script type="text/javascript" src="../../modules/main/components/main/MainComponent.js"></script>
+
+<!-- INICIO - COMPONENTES MAIN -->
+<!-- FIN - COMPONENTES MAIN --><!-- NO BORRAR NUNCA ESTA LINEA -->
+
+</body>
+</html>

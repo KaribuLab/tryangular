@@ -1,0 +1,22 @@
+<div class="modal-header ng-scope" ng-if="data.title != undefined && data.title != null">
+	<h4 class="modal-title ng-binding" id="modal-title-top">{{data.title}}</h4>
+</div>
+<div class="modal-body ng-scope" ng-if="data.dataHtml != undefined" compile="data.dataHtml"></div>
+<div class="modal-body ng-scope" ng-if="data.dataHtml == undefined" >{{data.message}}</div>
+<div class="modal-footer ng-scope" ng-if="data.type == 'ALERT'">
+	<button type="button" ng-click="data.close()">{{data.button}}</button>
+</div>
+<div class="modal-footer ng-scope" ng-if="data.type == 'CONFIRM'">
+	<button type="button" ng-click="data.accept(); data.close()">{{data.buttonAccept}}</button>
+	<button type="button" ng-click="data.close()">{{data.buttonCancel}}</button>
+</div>
+<div class="modal-footer ng-scope" ng-if="data.type == 'YES_NO'">
+	<button type="button" ng-click="data.yes(); data.close()">{{data.buttonYes}}</button>
+	<button type="button" ng-click="data.no(); data.close()">{{data.buttonNo}}</button>
+	<button type="button" ng-click="data.close()">{{data.buttonCancel}}</button>
+</div>
+<div class="modal-footer ng-scope" ng-if="data.type == 'OPTIONS'">
+	<button ng-repeat="item in data.options" type="button" ng-click="item.action(); data.close()">{{item.label}}</button>
+	<button type="button" ng-click="data.close()">{{data.buttonCancel}}</button>
+</div>
+

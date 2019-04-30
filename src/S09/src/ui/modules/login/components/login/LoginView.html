@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="../../modules/login/components/login/LoginStyle.css">
+<div class="fullscreen">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="loginBig  center-center">
+                <div class="row">
+                    <div class="col-md-12 imageLogo">
+                        <img src="/assets/images/logo.png" alt="Logo">
+                    </div>
+                    <div class="col-md-12 login">
+                        <h2 class="text-center" style="font-weight:bold; font-size:18px;">
+                            BIENVENIDO/A AL SISTEMA <br>
+                            DE MONITOREO DE TURNOS
+                        </h2>
+                        <p class="textvalid">Por favor ingresa tus datos para continuar </p>
+                        <div style="margin-top:35px;">
+                            <p class="textlog">Nombre de usuario</p>
+                            <input ng-model="username"  type="text" name="username" id="username" placeholder="Ingresa tu nombre de usuario">
+                        </div>
+                        
+                        <div style="margin-top:35px;">
+                            <p class="textlog">Contraseña</p>
+                            <input ng-model="password"  type="password" name="contrasena" id="password" placeholder="Ingresa tu contraseña">
+                        </div>
+                    </div>
+
+                    <div class="btn-login col-md-12" style="display:flex; justify-content:flex-end;">
+                        <div class="btn btn-primary" ng-click="sendData()">Ingresar</div>
+                    </div>
+
+                    <div class="col-md-12 textvalid2">
+                        Si olvidaste tu contraseña, haz click <a ng-click="recoverView()" style="cursor:pointer">aqui</a>
+                    </div>
+              </div> 
+          </div>
+      </div>
+  </div>
+</div>

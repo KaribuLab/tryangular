@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="../../modules/commons/components/topbar/TopbarStyle.css">
+<header>
+	<div class="row">
+		<div class="col-xs-6 title"  id="titlePage">
+			{{title}}
+		</div>
+		<div class="col-xs-6 text-right xs">
+			<span class="glyphicon glyphicon-question-sign">
+				<md-tooltip md-direction="bottom">
+					?
+				</md-tooltip>
+			</span>
+			<span style="cursor: pointer;" ui-sref="chargeProfile" ui-sref-active="active" class="glyphicon glyphicon-user">
+				<md-tooltip md-direction="bottom">
+					Logueado como {{nameUser}}
+				</span>
+			</span>
+			<span class="glyphicon glyphicon-off" ng-click="desloguear()">
+				<md-tooltip md-direction="bottom">
+					Cerrar sesión
+				</md-tooltip>
+			</span>
+		</div>
+	</div>
+</header>  

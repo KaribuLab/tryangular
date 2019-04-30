@@ -1,0 +1,38 @@
+menubar {
+    margin: 0px;
+    padding: 0px;
+}
+
+menubar nav div {
+    width: 100%;
+    height: 35px;
+    display: block;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:30px;
+    list-style: none;
+}
+
+menubar nav > div > div > span {
+    float: left;
+}
+
+menubar nav > div > div > span.glyphicon {
+    float: right;
+    line-height: 18px;
+}
+
+menubar nav a.active {
+    background: #CCCCCC;
+}
+
+menubar .drop-content{
+    position:relative;
+    z-index:1;
+}
+
+menubar .drop-content > li > a:hover{
+    background:#006ACB;
+    color:white;
+}

@@ -1,0 +1,111 @@
+:root {
+	--sidebar-width: 170px; /* ANCHO DEL SIDEBAR*/
+	--topbar-height: 70px; /* ALTURA DEL HEADER*/
+
+	--font-color-a: #006ACB; /* LETRAS AZULES DE LOS MENU */
+	--font-color-b: #FCFEFF; /* LETRAS BLANCAS PARA FONDO AZUL*/
+	--font-color-c: #015AA4; /* LETRAS AZUL OSCURO DE LOS FILTROS */
+	--font-color-d: #FF4700; /* ICONOS NARANJA*/
+	
+	--border-color-a: #D9DADA; /* BORDE GRIS DERECHO DEL SIDEBAR */
+	--border-color-b: #7DB7E6; /* BORDE AZUL DE LOS FILTROS */
+	--border-color-c: #ADCBE5; /* BORDE AZUL CLARO DE LAS TABLAS */
+	--border-color-d: #366D9A; /* BORDE AZUL OSCURO DE TABLAS */
+	
+	--bg-color-a: #FCFEFF; /* FONDO BLANCO PRINCIPAL */
+	--bg-color-b: #F0F0F0; /* FONDO GRIS DEL SIDEBAR */
+	--bg-color-c: #0071CE; /* FONDO DEL ENCABEZADO DE LA TABLA */
+	--bg-color-d: #ECF4FA; /* FONDO CLARO DE LA CEBRA DE LA TABLA */
+	--bg-color-e: #D0E2F1; /* FONDO OSCURO DE LA CEBRA DE LA TABLA */
+	--bg-color-f: #96CCFF; /* FONDO RESALTADO DE LA TABLA */
+
+}
+
+html, body {
+    color: var(--font-color-a);
+    background-color: var(--bg-color-a);
+}
+
+md-content{
+  background-color:#FFFFFF;
+}
+
+button {
+    color: var(--font-color-b);
+    background-color: var(--bg-color-c);
+    border: 1px solid var(--border-color-a);
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border-radius: 4px;
+}
+
+.buttons-bar-top {
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top:15px;
+}
+
+table tr th{
+    background-color: var(--bg-color-c);
+    color: var(--font-color-b);
+}
+
+table tr>*{
+    padding: 10px 5px;
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--bg-color-d);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--bg-color-e);
+}
+
+
+.fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-bg-primary);
+}
+
+.center-center {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.md-calendar-day-header{
+    width:346px;
+}
+
+.md-default-theme .md-datepicker-input-container.md-datepicker-invalid, .md-datepicker-input-container.md-datepicker-invalid, .md-warn .md-default-theme .md-datepicker-input-container.md-datepicker-focused, .md-warn .md-datepicker-input-container.md-datepicker-focused {
+    border-bottom-color:#848484;
+}
+
+span.multiSelect.inlineBlock>button{
+    width: 100%;
+}

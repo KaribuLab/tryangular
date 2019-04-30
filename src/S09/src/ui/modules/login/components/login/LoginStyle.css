@@ -1,0 +1,49 @@
+login .loginBig{
+	width:300px;
+}
+
+login .btn-login{
+	margin-top:15px;
+}
+
+login .textlog{
+	color :#000;
+	font-weight:bold;
+}
+
+login .imageLogo{
+	padding: 0px 10px 20px;
+	height: 100px;
+	text-align: center;
+}
+
+login .imageLogo > img{
+	height: 100%;
+}
+
+login .textvalid{
+	color:#0B173B;
+	margin-top:35px;
+	text-align:center;
+}
+
+login .textvalid2{
+	color:#0B173B;
+	margin-top:35px;
+	text-align:center;
+}
+
+login input{
+	border:none;
+	background:#E6E6E6;
+	padding-left:10px;
+	color:#000;
+	width:100%;
+	height:35px;
+
+}
+
+login input:focus{
+	border:none;
+	outline:none;
+}
